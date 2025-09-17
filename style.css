@@ -1,0 +1,48 @@
+/* Part 1: CSS3 Transitions */
+
+/* Basic button style */
+#animatedButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+#animatedButton:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+/* Part 1: Keyframe Animation */
+@keyframes boxPulse {
+  0% {
+    transform: scale(1);
+    background-color: #2196f3;
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: #64b5f6;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #2196f3;
+  }
+}
+
+/* Box styling */
+#animatedBox {
+  width: 150px;
+  height: 150px;
+  background-color: #2196f3;
+  margin-top: 30px;
+  border-radius: 12px;
+}
+
+/* Class to trigger animation on box */
+.animatePulse {
+  animation: boxPulse 1s infinite;
+}
